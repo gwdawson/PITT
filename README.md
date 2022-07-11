@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+## PITT - Panintelligence Technical Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Panintelligence Logo](./assets/banner.jpg)
 
-## Available Scripts
+A holiday agency would like to suggest the lowest travel cost for holiday journeys to their customers.\
+A return journey consists of the following parts:
 
-In the project directory, you can run:
+- Taxi: £0.40/mile - (allows up to 4 people per taxi)
+- Car: £0.20/mile - (allows up to 4 people per car), additional £3 parking fee
+- Flight: £0.10/passenger/mile
 
-### `npm start`
+This holiday agency already has an webservice API which can list the available airports, their connections and suggest the fastest routes.
+This API is public and the documentation can be found here.
+Your task is to make use of this API to build an application that gives a user the ability to:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Suggest which vehicle to use to get to the departure airport (either Taxi or Car)
+- Plan the flight from one airport to another (i.e. list the departure and arrival airports as well as all those inbetween)
+- Plan the return flight
+- List the total cost of the whole journey (journey to the outbound airport, the outbound and inbound flight)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The application can be built in whatever language you prefer using whichever technologies you’d like.
 
-### `npm test`
+## Getting started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```yaml
+$ git clone https://github.com/gwdawson/PITT.git
+# Clones the repository into the current directory.
 
-### `npm run build`
+$ cd PITT
+# Changes the current directory to the application directory.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+$ npm install
+# Installs all the dependencies.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+you can run several commands:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+$ npm start
+# Starts the development server.
 
-### `npm run eject`
+$ npm run build
+# Bundles the app into static files for production.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+$ npm test
+# Starts the test runner.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+$ npm run eject
+# Removes this tool and copies build dependencies, configuration files
+# and scripts into the app directory. If you do this, you can’t go back!
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+All repositories distributed under the NULL License. See [`NULL`]() for more information.

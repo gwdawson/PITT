@@ -1,0 +1,61 @@
+/* TODO */
+/* - use classes to target elements */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 0px 30px 0px;
+  width: calc(100% - 120px);
+  height: 60px;
+  padding: 0px 60px;
+}
+
+nav:where(h1, ul, li, a, div, button) {
+  margin: 0px;
+  padding: 0px;
+}
+
+nav > ul {
+  list-style: none;
+}
+
+nav > ul > li > a {
+  margin-right: 30px;
+  color: #424242;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+nav > ul > li > a:hover {
+  color: #3d457d;
+}
+
+nav > ul > li > a:first-child {
+  color: #3d457d;
+  border-bottom: 2px solid #3d457d;
+}
+
+nav > ul > li > a:last-child {
+  margin-right: 0px;
+}
+
+nav > div > button {
+  padding: 10px 30px;
+  font-weight: 600;
+  background-color: #3d457d;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+nav > div > button:first-child {
+  background-color: #ffffff;
+  color: #3d457d;
+}
+
+nav > div > button:last-child {
+  background-color: #3d457d;
+  color: #ffffff;
+}

@@ -1,4 +1,6 @@
 import './styles/App.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Navigation from './components/Navigation';
 import Homepage from './pages/Homepage';
@@ -6,6 +8,7 @@ import Homepage from './pages/Homepage';
 function App() {
   return (
     <div className="App">
+      <ToastContainer />
       <Navigation />
       <Homepage />
     </div>

@@ -48,7 +48,7 @@ const Ticket = ({ first, last, outbound }) => {
               BOARDING TIME
               <br />
               {outbound && <span>6:45AM ON JULY 23RD</span>}
-              {!outbound && <span>6:45AM ON AUGUST 6TH</span>}
+              {!outbound && <span>11:32PM ON AUGUST 6TH</span>}
             </span>
             <span className="flight flightslip">
               FLIGHT N&deg;

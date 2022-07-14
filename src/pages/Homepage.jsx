@@ -37,9 +37,11 @@ const Homepage = () => {
       },
       to: {
         journey: [],
+        cost: 0,
       },
       from: {
         journey: [],
+        cost: 0,
       },
     },
   });
@@ -62,8 +64,8 @@ const Homepage = () => {
 
   return (
     <div className="Homepage">
-      <Selection data={data} setData={setData} />
-      <Results data={data} setData={setData} scrollToRef={scrollToRef} />
+      <Selection data={data} setData={setData} scrollToRef={scrollToRef} />
+      <Results data={data} />
     </div>
   );
 };

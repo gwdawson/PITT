@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactTooltip from 'react-tooltip';
 import '../styles/Homepage.css';
 import Ticket from '../components/Ticket';
 
@@ -16,28 +17,10 @@ const Results = ({ data, scrollToRef }) => {
             <Ticket
               first={data.flight.to.journey[0]}
               last={data.flight.to.journey[data.flight.to.journey.length - 1]}
+              layovers={data.flight.to.journey.length - 2}
               outbound={true}
             />
-            <div className="data">
-              <h3>TO</h3>
-              <p>{journeyTo.join(' ')}</p>
-            </div>
-          </>
-        )}
-      </div>
-      <div className="results">
-        {journeyFrom.length > 0 && (
-          <>
-            <Ticket
-              style={{ alignSelf: 'flex-start' }}
-              first={data.flight.to.journey[data.flight.to.journey.length - 1]}
-              last={data.flight.to.journey[0]}
-              outbound={false}
-            />
-            <div className="data">
-              <h3>FROM</h3>
-              <p>{journeyFrom.join(' ')}</p>
-            </div>
+            <div className="data">data here...</div>
           </>
         )}
       </div>

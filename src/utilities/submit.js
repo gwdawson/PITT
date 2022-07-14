@@ -14,11 +14,28 @@ export const handleSubmit = async (e, setData) => {
 
   const FlightToData = await getAirportToAirport(from, to);
   const FlightFromData = await getAirportToAirport(to, from);
-  const price = calculateJourneyCost(vehicle, distance, travelers);
+  const JourneyPrice = calculateJourneyCost(vehicle, distance, travelers);
   const constructedTo = FlightToData.data.journey.flatMap((item) => [item, '→']);
   const constructedFrom = FlightFromData.data.journey.flatMap((item) => [item, '→']);
   constructedTo.pop();
   constructedFrom.pop();
+
+  let flightToMiles = FlightToData.data.miles[0];
+  let flightFromMiles = FlightFromData.data.miles[0];
+
+  if (FlightToData.data.miles.length > 1) {
+    flightToMiles = FlightToData.data.miles.reduce((acc, curr) => {
+      return acc + curr;
+    });
+  }
+  if (FlightFromData.data.miles.length > 1) {
+    flightFromMiles = FlightFromData.data.miles.reduce((acc, curr) => {
+      return acc + curr;
+    });
+  }
+
+  let flightToCost = `£${(flightToMiles * 0.1 * travelers).toFixed(2)}`;
+  let flightFromCost = `£${(flightFromMiles * 0.1 * travelers).toFixed(2)}`;
 
   setData((prev) => {
     return {
@@ -35,12 +52,14 @@ export const handleSubmit = async (e, setData) => {
         from: FlightFromData.data,
       },
       constructed: {
-        travel: price,
+        travel: JourneyPrice,
         to: {
           journey: constructedTo,
+          cost: flightToCost,
         },
         from: {
           journey: constructedFrom,
+          cost: flightFromCost,
         },
       },
     };

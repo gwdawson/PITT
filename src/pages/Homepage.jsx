@@ -37,11 +37,9 @@ const Homepage = () => {
       },
       to: {
         journey: [],
-        airports: [],
       },
       from: {
         journey: [],
-        airports: [],
       },
     },
   });

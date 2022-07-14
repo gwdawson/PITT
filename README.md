@@ -2,6 +2,21 @@
 
 ![Panintelligence Logo](./assets/banner.jpg)
 
+## Dependencies
+
+```json
+{
+  "dependencies": {
+    "axios": "^0.27.2",
+    "react": "^18.2.0",
+    "react-burger-menu": "^3.0.8",
+    "react-icons": "^4.4.0",
+    "react-toastify": "^9.0.5",
+    "react-tooltip": "^4.2.21"
+  }
+}
+```
+
 ## Getting started
 
 ```yaml

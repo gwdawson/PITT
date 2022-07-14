@@ -61,7 +61,12 @@ const Results = ({ data }) => {
       </div>
       <div className="results" style={{ display: journeyTo.length > 0 ? '' : 'none' }}>
         <h1>
-          Total Travel Costs: {selectedVehicleCost} + {travelToCost} + {travelFromCost}
+          Total Travel Costs: £
+          {(
+            parseFloat(selectedVehicleCost.slice(1)) +
+            parseFloat(travelToCost.slice(1)) +
+            parseFloat(travelFromCost.slice(1))
+          ).toFixed(2)}
         </h1>
       </div>
     </>

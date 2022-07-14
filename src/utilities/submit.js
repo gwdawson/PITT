@@ -1,7 +1,7 @@
 import { getAirportToAirport } from './connection';
 import { toast } from 'react-toastify';
 
-export const handleSubmit = async (e, setData) => {
+export const handleSubmit = async (e, data, setData) => {
   e.preventDefault();
 
   const vehicle = e.target.vehicle.value;
@@ -10,7 +10,7 @@ export const handleSubmit = async (e, setData) => {
   const to = e.target.to.value;
   const travelers = parseInt(e.target.travelers.value);
 
-  if (!vehicle && !distance && !from && !to && !travelers) return toast.error('Please fill in all fields');
+  if (!vehicle || !distance || !from || !to || !travelers) return toast.error('Please fill in all fields');
 
   const FlightToData = await getAirportToAirport(from, to);
   const FlightFromData = await getAirportToAirport(to, from);
@@ -36,6 +36,7 @@ export const handleSubmit = async (e, setData) => {
       },
       constructed: {
         travel: { ...price },
+        airports: [],
         to: {
           journey: constructedTo,
         },

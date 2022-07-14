@@ -1,7 +1,7 @@
 import React from 'react';
 import { BiErrorCircle } from 'react-icons/bi';
 import ReactTooltip from 'react-tooltip';
-import '../styles/Homepage.css';
+import '../styles/Results.css';
 import Ticket from '../components/Ticket';
 
 const Results = ({ data }) => {

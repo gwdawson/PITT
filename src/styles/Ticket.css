@@ -10,7 +10,6 @@ body {
 }
 
 .box {
-  margin-left: -55px;
   top: calc(50% - 125px);
   top: -webkit-calc(50% - 125px);
   left: calc(50% - 300px);

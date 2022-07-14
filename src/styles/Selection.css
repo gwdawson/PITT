@@ -75,6 +75,7 @@
 
 .input-left {
   padding: 10px;
+  width: 175px;
   background: none;
   border: 1px solid #000000;
   border-right: none;
@@ -84,6 +85,7 @@
 
 .input-right {
   padding: 10px;
+  width: 175px;
   background: none;
   border: 1px solid #000000;
   border-top-right-radius: 7px;
@@ -92,6 +94,7 @@
 
 .input-solo {
   padding: 10px;
+  width: 175px;
   background: none;
   border: 1px solid #000000;
   border-radius: 7px;
@@ -100,6 +103,7 @@
 .input-submit {
   margin-top: 16px;
   padding: 10px;
+  width: 175px;
   background: none;
   border: 1px solid #000000;
   border-radius: 7px;
@@ -110,7 +114,25 @@ input {
   height: 17px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1378px) {
+  .input-left,
+  .input-right,
+  .input-solo,
+  .input-submit {
+    width: 160px;
+  }
+}
+
+@media (max-width: 1289px) {
+  .input-left,
+  .input-right,
+  .input-solo,
+  .input-submit {
+    width: 140px;
+  }
+}
+
+@media (max-width: 1168px) {
   .options {
     margin: calc((-435px * 2) / 3) 0px 60px 0px;
     padding: 40px 20px;

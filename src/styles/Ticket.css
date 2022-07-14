@@ -3,6 +3,30 @@
 /* https://codepen.io/kotay/pen/qBXgem */
 /* ----------------------------------- */
 
+@media (max-width: 620px) {
+  .box {
+    transform: scale(0.6) rotate(-5deg) !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .box {
+    transform: scale(0.5) rotate(-5deg) !important;
+  }
+}
+
+@media (max-width: 445px) {
+  .box {
+    transform: scale(0.4) rotate(-5deg) !important;
+  }
+}
+
+@media (max-width: 374px) {
+  .box {
+    transform: scale(0.3) rotate(-5deg) !important;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;

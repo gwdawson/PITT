@@ -109,3 +109,52 @@
 input {
   height: 17px;
 }
+
+@media (max-width: 768px) {
+  .options {
+    margin: calc((-435px * 2) / 3) 0px 60px 0px;
+    padding: 40px 20px;
+  }
+
+  .input-wrapper {
+    display: block;
+  }
+
+  .input-airports,
+  .input-people,
+  .input-search,
+  .input-travel {
+    display: block;
+    margin: 0;
+  }
+
+  .input-left,
+  .input-right,
+  .input-solo,
+  .input-submit {
+    width: 100%;
+    margin-bottom: 7px;
+    border: 1px solid #000000;
+    border-radius: 7px;
+  }
+
+  .input-solo {
+    margin-bottom: 0px;
+  }
+
+  input {
+    width: calc(100% - 22px) !important;
+  }
+}
+
+@media (max-width: 595px) {
+  .title {
+    margin-top: calc(34px * 2);
+  }
+  .options {
+    width: calc(100% - 50px - 80px);
+  }
+  .banner {
+    width: calc(100% - 40px);
+  }
+}

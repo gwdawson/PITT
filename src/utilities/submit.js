@@ -1,7 +1,7 @@
 import { getAirportToAirport } from './connection';
 import { toast } from 'react-toastify';
 
-export const handleSubmit = async (e, data, setData) => {
+export const handleSubmit = async (e, setData) => {
   e.preventDefault();
 
   const vehicle = e.target.vehicle.value;
@@ -36,7 +36,6 @@ export const handleSubmit = async (e, data, setData) => {
       },
       constructed: {
         travel: { ...price },
-        airports: [],
         to: {
           journey: constructedTo,
         },

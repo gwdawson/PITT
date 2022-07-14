@@ -16,7 +16,7 @@ const Homepage = () => {
     },
     flight: {
       to: {
-        journey: ['ABC', 'DEF'],
+        journey: [],
         miles: [],
       },
       from: {
@@ -37,9 +37,11 @@ const Homepage = () => {
       },
       to: {
         journey: [],
+        airports: [],
       },
       from: {
         journey: [],
+        airports: [],
       },
     },
   });
@@ -63,7 +65,7 @@ const Homepage = () => {
   return (
     <div className="Homepage">
       <Selection data={data} setData={setData} />
-      <Results data={data} scrollToRef={scrollToRef} />
+      <Results data={data} setData={setData} scrollToRef={scrollToRef} />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { handleSubmit } from '../utilities/submit';
-import '../styles/Homepage.css';
+import '../styles/Selection.css';
 
 const Selection = ({ data, setData, scrollToRef }) => {
   return (

@@ -14,7 +14,7 @@ export const handleSubmit = async (e, setData) => {
 
   const FlightToData = await getAirportToAirport(from, to);
   const FlightFromData = await getAirportToAirport(to, from);
-  const price = calculateJourneyCost(vehicle, distance);
+  const price = calculateJourneyCost(vehicle, distance, travelers);
   const constructedTo = FlightToData.data.journey.flatMap((item) => [item, '→']);
   const constructedFrom = FlightFromData.data.journey.flatMap((item) => [item, '→']);
   constructedTo.pop();
@@ -35,7 +35,7 @@ export const handleSubmit = async (e, setData) => {
         from: FlightFromData.data,
       },
       constructed: {
-        travel: { ...price },
+        travel: price,
         to: {
           journey: constructedTo,
         },
@@ -47,11 +47,14 @@ export const handleSubmit = async (e, setData) => {
   });
 };
 
-const calculateJourneyCost = (vehicle, distance) => {
-  let car = parseFloat(distance * 0.2 + 3);
-  let taxi = parseFloat(distance * 0.4);
+const calculateJourneyCost = (vehicle, distance, travelers) => {
+  let car = parseFloat(distance * 0.2 + 3) * Math.ceil(travelers / 4);
+  let carFormatted = `£${car.toFixed(2)}`;
+  let taxi = parseFloat(distance * 0.4) * Math.ceil(travelers / 4);
+  let taxiFormatted = `£${taxi.toFixed(2)}`;
+
   return {
-    selected: { vehicle: vehicle, cost: vehicle === 'CAR' ? car.toFixed(2) : taxi.toFixed(2) },
-    suggested: { vehicle: car < taxi ? 'CAR' : 'TAXI', cost: car < taxi ? car.toFixed(2) : taxi.toFixed(2) },
+    selected: { vehicle: vehicle, cost: vehicle === 'CAR' ? carFormatted : taxiFormatted },
+    suggested: { vehicle: car < taxi ? 'CAR' : 'TAXI', cost: car < taxi ? carFormatted : taxiFormatted },
   };
 };

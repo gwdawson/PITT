@@ -5,7 +5,7 @@ import '../styles/Ticket.css';
 // https://codepen.io/kotay/pen/qBXgem \\
 // ----------------------------------- \\
 
-const Ticket = ({ first, last, outbound }) => {
+const Ticket = ({ first, last, layovers, outbound }) => {
   return (
     <div className="box">
       <div className="clip"></div>
@@ -49,6 +49,11 @@ const Ticket = ({ first, last, outbound }) => {
               <br />
               {outbound && <span>6:45AM ON JULY 23RD</span>}
               {!outbound && <span>11:32PM ON AUGUST 6TH</span>}
+            </span>
+            <span className="layovers">
+              LAYOVERS
+              <br />
+              <span>{layovers}</span>
             </span>
             <span className="flight flightslip">
               FLIGHT N&deg;

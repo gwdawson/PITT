@@ -395,6 +395,21 @@ body {
   font-size: 17px;
 }
 
+.layovers {
+  position: absolute;
+  top: 60px;
+  left: 200px;
+  font-family: Arial Narrow, Arial;
+  font-weight: bold;
+  font-size: 14px;
+  color: #999;
+}
+
+.layovers span {
+  color: #555;
+  font-size: 17px;
+}
+
 .barcode {
   position: absolute;
   left: 8px;

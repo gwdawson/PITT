@@ -1,6 +1,16 @@
-/* ----------------------------- */
-/* TODO: CONVERT CSS TO CLASSES. */
-/* ----------------------------- */
+/* ------------------------------ */
+/* TODO: CONVERT CSS TO CLASSES.  */
+/* TODO: ADD HAMBURGER TO MOBILE. */
+/* ------------------------------ */
+
+@media (max-width: 768px) {
+  nav > ul {
+    display: none;
+  }
+  nav > div {
+    display: none;
+  }
+}
 
 nav {
   display: flex;

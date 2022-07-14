@@ -2,13 +2,13 @@ import React from 'react';
 import { handleSubmit } from '../utilities/submit';
 import '../styles/Homepage.css';
 
-const Selection = ({ data, setData }) => {
+const Selection = ({ data, setData, scrollToRef }) => {
   return (
     <>
       <div className="banner">
         <h1 className="title">EXPLORE BEAUTIFUL PLACES</h1>
       </div>
-      <div className="options">
+      <div ref={scrollToRef} className="options">
         <form className="input-wrapper" onSubmit={(e) => handleSubmit(e, setData)}>
           <div className="input-travel">
             <div className="input-block">
